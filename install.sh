@@ -399,10 +399,10 @@ ptyjs(){
   "$NPM" install node-gyp
   "$NPM" install pty.js@0.2.7-1
   
-  HASPTY=`"$C9_DIR/node/bin/node" -e "console.log(require('pty.js'))" | grep createTerminal | wc -l`
+  HASPTY=`"$NODE" -e "console.log(require('pty.js'))" | grep createTerminal | wc -l`
   if [ $HASPTY -ne 1 ]; then
     echo "Unknown exception installing pty.js"
-    echo `"$C9_DIR/node/bin/node" -e "console.log(require('pty.js'))"`
+    echo `"$NODE" -e "console.log(require('pty.js'))"`
     exit 100
   fi
 }
