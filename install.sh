@@ -236,6 +236,12 @@ ensure_local_gyp() {
 }
 
 node(){
+
+  "$NPM" config -g set cache  "$C9_DIR/tmp/.npm"
+  PATH="$C9_DIR/node_modules/.bin:$PATH"
+  ensure_local_gyp
+  return 0
+
   # clean up 
   rm -rf node 
   rm -rf node-$NODE_VERSION*
