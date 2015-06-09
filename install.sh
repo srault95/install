@@ -25,8 +25,8 @@ VERSION=1
 NODE_VERSION=v0.12.4
 NODE_VERSION_ARM_PI=v0.10.28
 C9_DIR=$HOME/.c9
-NPM=$C9_DIR/node/bin/npm
-NODE=$C9_DIR/node/bin/node
+NPM=/usr/bin/npm
+NODE=/usr/bin/node
 
 export TMP=$C9_DIR/tmp
 export TMPDIR=$TMP
